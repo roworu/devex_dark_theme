@@ -1,0 +1,33 @@
+/* ==UserStyle==
+@name           Jira + Confluence Dark theme
+@namespace      Jira + Confluence Dark theme
+@version        1
+==/UserStyle== */
+@-moz-document domain("jira.in.devexperts.com"),
+domain("confluence.in.devexperts.com")
+{
+html {
+    filter: invert(86%) hue-rotate(180deg) brightness(105%) contrast(105%);
+    background: white;
+}
+body {
+    background: white;
+}
+span[role="img"] {
+    filter: invert(100%) hue-rotate(180deg) brightness(105%) contrast(105%);
+}
+img, svg, iframe, .emoji-common-emoji-sprite {
+	filter: invert(100%) hue-rotate(180deg) brightness(105%) contrast(105%);
+}
+/* Fix bug with white edges on sprint board */
+#gh {
+    padding: 0 40px;
+}
+#content {
+    margin: 0;
+}
+/* Fix scroll background problems */
+[data-testid="Content"] > div:first-child {
+    background: white;
+}
+}
